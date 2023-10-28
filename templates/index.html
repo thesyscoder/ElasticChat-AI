@@ -1,0 +1,29 @@
+<!-- app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Search</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Chatbot Search</h1>
+    <form id="searchForm">
+      <input
+        type="text"
+        id="query"
+        name="query"
+        placeholder="Enter your query"
+      />
+      <button type="button" onclick="search()">Search</button>
+    </form>
+    <div id="result"></div>
+
+    <script src="{{ url_for('static', path='js/script.js') }}"></script>
+  </body>
+</html>
