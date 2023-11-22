@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<h1>Chatbot Interface</h1>
+    <form method="post" action="{{ url_for('chatbot.chatbot') }}">
+        <label for="user_input">User Input:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if chatbot_response %}
+        <p>Chatbot Response: {{ chatbot_response }}</p>
+    {% endif %}
+{% endblock main_content %}
